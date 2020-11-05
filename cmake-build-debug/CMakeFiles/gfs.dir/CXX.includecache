@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/Users/marcoromanelli/github_marcoromane/ParallelGreedyFeatureSelection/C_code/gfs.h
+map
+-
+set
+-
+cmath
+-
+vector
+-
+thread
+-
+future
+-
+iostream
+-
+
+/Users/marcoromanelli/github_marcoromane/ParallelGreedyFeatureSelection/main.cpp
+iostream
+-
+C_code/gfs.h
+/Users/marcoromanelli/github_marcoromane/ParallelGreedyFeatureSelection/C_code/gfs.h
+vector
+-
+stdio.h
+-
+

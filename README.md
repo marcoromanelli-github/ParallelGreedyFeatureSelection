@@ -1,2 +1,2 @@
 # ParallelGreedyFeatureSelection
-ParallelGreedyFeatureSelection
+Parallel

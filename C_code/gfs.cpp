@@ -40,12 +40,12 @@ vector<int> gfsManager::greedyAlgorithm(int feat_card, int njobs, string strateg
                                     "less than the total number of available features");
     }
     for (int step = 0; step < feat_card; ++step) {   //  feature selection step: step; this is sequential
-        gfsPickNextFeature(nasynch, strategy);
+        gfsPickNextFeature(nasynch, strategy, step);
     }
     return this->S_index;
 }
 
-void gfsManager::gfsPickNextFeature(int nasynch, string strategy) {
+void gfsManager::gfsPickNextFeature(int nasynch, string strategy, int step) {
     vector<pair<int, float> > res;
     res.reserve(this->F.size());
 
@@ -76,10 +76,22 @@ void gfsManager::gfsPickNextFeature(int nasynch, string strategy) {
         res.push_back(f.get());
     }
 
+//    vector<future<pair<int, float> > > futures;
+//    for (map<int, vector<string> >::iterator it = this->F.begin(); it != this->F.end(); ++it) {
+//        futures.emplace_back(
+//                std::async(std::launch::async, computeEntropy, std::cref(it->first), std::cref(it->second),
+//                           std::cref(this->S), this->labels, this->labels_set, strategy));
+//    }
+//
+//    for (auto &&f: futures) {
+//        res.push_back(f.get());
+//    }
+
     int res_final = findMin(res);
     this->S_index.push_back(res_final);
     this->S = newFeature(this->S, F[res_final]);
     this->F.erase(res_final);
+    cout << "Step " << step << ": selected feature ---> " << res_final << endl;
 }
 
 int findMin(vector<pair<int, float> > res) {

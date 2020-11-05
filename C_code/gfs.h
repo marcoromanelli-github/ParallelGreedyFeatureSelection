@@ -1,6 +1,9 @@
 //
 // Created by Marco Romanelli on 11/4/20.
 //
+//
+// g++ main.cpp gfs.cpp -o prog -lpthread
+//
 
 #ifndef GFS_GFS_H
 #define GFS_GFS_H
@@ -29,7 +32,7 @@ namespace gfs_manager_space {
 
         vector<int> greedyAlgorithm(int feat_card, int njobs, string strategy);
 
-        void gfsPickNextFeature(int nasynch, string strategy);
+        void gfsPickNextFeature(int nasynch, string strategy, int step);
 
     private:
         int rows;

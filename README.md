@@ -21,6 +21,6 @@ most informative features and spawning 2 new async processes at a time. We have 
 of leaving it up to the system. The max value corresponds to the number of possible threads and is obtained by passing the argiment -1.
 
 #### Todo
-- [ ] Extend this to Python bindings.
-- [ ] Heavy testing.
-- [ ] Improve the interface and the documentation.
+- [ ] Extend this to Python bindings
+- [ ] Heavy testing
+- [ ] Improve the interface and the documentation

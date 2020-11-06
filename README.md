@@ -1,3 +1,6 @@
+[![Documentation](https://img.shields.io/badge/Documentation-yes-blue)](https://img.shields.io/badge/Documentation-yes-blue)
+[![License](https://img.shields.io/badge/License-MIT-yellow.svg)](https://img.shields.io/badge/License-MIT-yellow.svg)
+
 # ParallelGreedyFeatureSelection
 
 Parrallel C++ based version of [this](https://github.com/marcoromanelli-github/GreedyFeatureSelection). 

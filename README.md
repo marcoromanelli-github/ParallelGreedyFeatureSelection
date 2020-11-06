@@ -17,6 +17,7 @@ foo$bar ./prog
 ```
 In particula, the line
 ```C++
+gfsManager a = gfsManager(data, labels);
 vector<int> res = a.greedyAlgorithm(5, 2, "shannon");
 ```
 means that we are calling the algorithm with Shannon entropy (alternatively we can call pass "renyi" for the Rényi min-entropy), asking for the 5 
